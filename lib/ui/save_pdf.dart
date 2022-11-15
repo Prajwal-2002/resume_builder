@@ -731,10 +731,11 @@ class SavePdf {
     final String path = '$dir/report.pdf';
     final File file = File(path);
     file.writeAsBytesSync(List.from(await pdf.save()));
-    material.Navigator.of(context).push(
+    /*material.Navigator.of(context).push(
       material.MaterialPageRoute(
         builder: (_) => PdfViewerPage(path: path),
       ),
-    );
+    );*/
+    PdfViewerPage(path: path).openfile();
   }
 }

@@ -43,6 +43,7 @@ dependencies:
   flutter_svg:
   printing:
   image_picker:
+  open_file_safe:
 
 dev_dependencies:
   flutter_test:

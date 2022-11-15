@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_full_pdf_viewer/full_pdf_viewer_scaffold.dart';
+import 'package:open_file_safe/open_file_safe.dart';
 
-class PdfViewerPage extends StatelessWidget {
+class PdfViewerPage {
   final String path;
-  const PdfViewerPage({required this.path});
+  const PdfViewerPage({
+    required this.path,
+  });
 
-  @override
-  Widget build(BuildContext context) {
-    return PDFViewerScaffold(
-      path: path,
-    );
+  openfile() {
+    OpenFile.open(path);
   }
 }

@@ -25,12 +25,12 @@ class _CreatePdfState extends State<CreatePdf> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(centerTitle: true, title: const Text("Create PDF")),
-      body: Container(
-        //padding: const EdgeInsets.only(left: 20, right: 20),
-        child: InputDetails(),
-        /*SingleChildScrollView(
+        backgroundColor: Colors.white,
+        appBar: AppBar(centerTitle: true, title: const Text("Create PDF")),
+        body: Container(
+          //padding: const EdgeInsets.only(left: 20, right: 20),
+          child: InputDetails(),
+          /*SingleChildScrollView(
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Text("Enter Details",
@@ -91,14 +91,13 @@ class _CreatePdfState extends State<CreatePdf> {
                   tia: TextInputAction.next),
             ]),
           ),*/
-      ),
-      /*floatingActionButton: FloatingActionButton(
+        ),
+        floatingActionButton: FloatingActionButton(
           onPressed: (() {
             saveToPdf();
           }),
           child: const Icon(Icons.save),
-        )*/
-    );
+        ));
   }
 
   saveToPdf() async {

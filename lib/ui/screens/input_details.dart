@@ -1,12 +1,16 @@
-import 'dart:convert';
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:simple_pdf/ui/save_pdf.dart';
 
-class InputDetails extends StatelessWidget {
-  const InputDetails({super.key});
+class InputDetails extends StatefulWidget {
+  InputDetails({super.key});
 
+  @override
+  State<InputDetails> createState() => _InputDetailsState();
+}
+
+class _InputDetailsState extends State<InputDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,12 +31,12 @@ class InputDetails extends StatelessWidget {
                   colors: [Colors.blue, Colors.red])),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
+      /*floatingActionButton: FloatingActionButton(
         onPressed: () {
           _getImageFromGallery();
         },
         child: const Icon(Icons.add),
-      ),
+      ),*/
       body: SingleChildScrollView(
           child: Column(children: [
         Container(
@@ -63,8 +67,8 @@ class InputDetails extends StatelessWidget {
   }
 
   _getImageFromGallery() async {
-    final pickedFile = await ImagePicker()
-        .pickImage(source: ImageSource.camera, maxHeight: 1800, maxWidth: 1800);
+    final pickedFile = await ImagePicker().pickImage(
+        source: ImageSource.gallery, maxHeight: 1800, maxWidth: 1800);
     if (pickedFile != null) {
       File imageFile = File(pickedFile.path);
     }
