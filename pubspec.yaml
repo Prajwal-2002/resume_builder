@@ -42,6 +42,7 @@ dependencies:
   path_provider:
   flutter_svg:
   printing:
+  image_picker:
 
 dev_dependencies:
   flutter_test:

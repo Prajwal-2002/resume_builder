@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:simple_pdf/input_field.dart';
 import 'package:simple_pdf/model/pdf_data.dart';
 import 'package:simple_pdf/ui/save_pdf.dart';
+import 'package:simple_pdf/ui/screens/input_details.dart';
 
 class CreatePdf extends StatefulWidget {
   const CreatePdf({super.key});
@@ -23,11 +25,12 @@ class _CreatePdfState extends State<CreatePdf> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
-        appBar: AppBar(centerTitle: true, title: const Text("Create PDF")),
-        body: Container(
-          padding: const EdgeInsets.only(left: 20, right: 20),
-          child: SingleChildScrollView(
+      backgroundColor: Colors.white,
+      appBar: AppBar(centerTitle: true, title: const Text("Create PDF")),
+      body: Container(
+        //padding: const EdgeInsets.only(left: 20, right: 20),
+        child: InputDetails(),
+        /*SingleChildScrollView(
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Text("Enter Details",
@@ -87,14 +90,15 @@ class _CreatePdfState extends State<CreatePdf> {
                   ctr: _dobController,
                   tia: TextInputAction.next),
             ]),
-          ),
-        ),
-        floatingActionButton: FloatingActionButton(
+          ),*/
+      ),
+      /*floatingActionButton: FloatingActionButton(
           onPressed: (() {
             saveToPdf();
           }),
           child: const Icon(Icons.save),
-        ));
+        )*/
+    );
   }
 
   saveToPdf() async {
