@@ -15,13 +15,11 @@ class CreatePdf extends StatefulWidget {
 
 class _CreatePdfState extends State<CreatePdf> {
   final _nameController = TextEditingController();
-  final _urlController = TextEditingController();
   final _collegeController = TextEditingController();
   final _emailController = TextEditingController();
   final _phoneController = TextEditingController();
   final _adressController = TextEditingController();
-  final _cgpaController = TextEditingController();
-  final _dobController = TextEditingController();
+  final List<Education> education = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -103,14 +101,13 @@ class _CreatePdfState extends State<CreatePdf> {
   saveToPdf() async {
     SavePdf.savePdf(
         PdfData(
-            name: _nameController.text,
-            url: _urlController.text,
-            college: _collegeController.text,
-            email: _emailController.text,
-            phone: _phoneController.text,
-            address: _adressController.text,
-            cgpa: _cgpaController.text,
-            dob: _dobController.text),
+          name: _nameController.text,
+          college: _collegeController.text,
+          email: _emailController.text,
+          phone: _phoneController.text,
+          address: _adressController.text,
+          education: education,
+        ),
         context);
   }
 }
