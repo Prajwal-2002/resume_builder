@@ -2,7 +2,8 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:simple_pdf/model/pdf_data.dart';
-import 'package:simple_pdf/ui/save_pdf.dart';
+import 'package:simple_pdf/ui/screens/save_pdf.dart';
+import 'package:simple_pdf/ui/screens/save_pdf2.dart';
 import '../../input_field.dart';
 
 class InputDetails extends StatefulWidget {
@@ -166,16 +167,16 @@ class _InputDetailsState extends State<InputDetails> {
   }
 
   saveToPdf() async {
-    SavePdf.savePdf(
-        PdfData(
-          name: _nameController.text,
-          college: _schoolController.text,
-          email: _emailController.text,
-          phone: _phoneController.text,
-          address: _adressController.text,
-          education: education,
-        ),
-        context);
+    SavePdf2.savePdf(
+      PdfData(
+        name: _nameController.text,
+        college: _schoolController.text,
+        email: _emailController.text,
+        phone: _phoneController.text,
+        address: _adressController.text,
+        education: education,
+      ),
+    );
   }
 
   _expansionTiles(String text, String subtitle, List<Widget> children) {

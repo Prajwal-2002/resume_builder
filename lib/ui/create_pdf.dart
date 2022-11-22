@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:simple_pdf/input_field.dart';
 import 'package:simple_pdf/model/pdf_data.dart';
-import 'package:simple_pdf/ui/save_pdf.dart';
+import 'package:simple_pdf/ui/screens/save_pdf.dart';
 import 'package:simple_pdf/ui/screens/input_details.dart';
 
 class CreatePdf extends StatefulWidget {

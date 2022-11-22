@@ -77,6 +77,10 @@ flutter:
     - assets/icons/email.png
     - assets/icons/phone.png
     - assets/icons/language.png
+    - assets/icon/email.png
+    - assets/icon/github.png
+    - assets/icon/linkedin.png
+    - assets/icon/telephone.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
