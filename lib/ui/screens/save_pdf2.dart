@@ -32,7 +32,7 @@ class SavePdf2 {
               //crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Container(
-                    height: 120,
+                    height: 80,
                     width: double.infinity,
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -41,7 +41,7 @@ class SavePdf2 {
                           Text("Satyam Kumar",
                               style: TextStyle(
                                   fontBold: Font.courierBoldOblique(),
-                                  fontSize: 20,
+                                  fontSize: 18,
                                   color: PdfColors.white)),
                           Row(children: [
                             Spacer(flex: 3),
@@ -74,7 +74,7 @@ class SavePdf2 {
                                         Radius.circular(3.0)))),
                             SizedBox(width: 5),
                             //Image(email),
-                            Text("7090615615",
+                            Text("6090615615",
                                 style: TextStyle(color: PdfColors.white)),
                             Spacer(),
                             Container(
@@ -89,7 +89,7 @@ class SavePdf2 {
                                         Radius.circular(3.0)))),
                             SizedBox(width: 5),
                             //Image(email),
-                            Text("Satyamkr07",
+                            Text("Satyamkr06",
                                 style: TextStyle(color: PdfColors.white)),
                             Spacer(),
                             Container(
@@ -110,14 +110,14 @@ class SavePdf2 {
                           ])
                         ]),
                     decoration: BoxDecoration(
-                      color: PdfColors.indigo700,
+                      color: PdfColors.indigo600,
                       shape: BoxShape.rectangle,
                     )),
                 Spacer(),
                 Container(
                     alignment: Alignment.center,
-                    height: 20,
-                    padding: EdgeInsets.only(top: 1.7, bottom: 1.7),
+                    height: 18,
+                    padding: EdgeInsets.only(top: 1.6, bottom: 1.6),
                     margin: EdgeInsets.only(left: 15, right: 15),
                     color: PdfColors.blueGrey100,
                     child: Text("Profile",
@@ -138,8 +138,8 @@ class SavePdf2 {
                 Spacer(),
                 Container(
                     alignment: Alignment.center,
-                    height: 20,
-                    padding: EdgeInsets.only(top: 1.7, bottom: 1.7),
+                    height: 18,
+                    padding: EdgeInsets.only(top: 1.6, bottom: 1.6),
                     margin: EdgeInsets.only(left: 15, right: 15),
                     color: PdfColors.blueGrey100,
                     child: Text("Professional Experience",
@@ -160,9 +160,9 @@ class SavePdf2 {
                         Text("Rapidalley",
                             style: TextStyle(font: Font.timesItalic())),
                         Spacer(),
-                        Text("2020")
+                        Text("1818")
                       ]),
-                      SizedBox(height: 8),
+                      SizedBox(height: 6),
                       Row(children: [
                         Text("Flutter Developer, ",
                             style: TextStyle(
@@ -173,7 +173,7 @@ class SavePdf2 {
                         Spacer(),
                         Text("present")
                       ]),
-                      SizedBox(height: 8),
+                      SizedBox(height: 6),
                       Row(children: [
                         Text("My Flutter Youtube channel, ",
                             style: TextStyle(
@@ -184,7 +184,7 @@ class SavePdf2 {
                         Spacer(),
                         Text("present")
                       ]),
-                      SizedBox(height: 8),
+                      SizedBox(height: 6),
                       Row(children: [
                         Text("My Startup : Yozznet, ",
                             style: TextStyle(
@@ -195,13 +195,12 @@ class SavePdf2 {
                             style: TextStyle(font: Font.timesItalic())),
                         Spacer(),
                       ]),
-                      SizedBox(height: 8),
                     ])),
                 Spacer(),
                 Container(
                     alignment: Alignment.center,
-                    height: 20,
-                    padding: EdgeInsets.only(top: 1.7, bottom: 1.7),
+                    height: 18,
+                    padding: EdgeInsets.only(top: 1.6, bottom: 1.6),
                     margin: EdgeInsets.only(left: 15, right: 15),
                     color: PdfColors.blueGrey100,
                     child: Text("Skills",
@@ -223,9 +222,9 @@ class SavePdf2 {
                                 children: [
                                   Container(
                                       alignment: Alignment.centerLeft,
-                                      height: 16,
+                                      height: 14,
                                       padding: EdgeInsets.only(
-                                          top: 1.7, bottom: 1.7),
+                                          top: 1.6, bottom: 1.6),
                                       child: Text("Flutter",
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold,
@@ -238,7 +237,7 @@ class SavePdf2 {
                                       //color: PdfColors.blueGrey100,
                                       child: Text(
                                           "2.5+ years exp in coding apps with Flutter , +Points: state management-Getx and provider,MVC pattern, systematic coding",
-                                          maxLines: 4,
+                                          maxLines: 3,
                                           style: TextStyle(
                                               fontWeight: FontWeight.normal,
                                               font: Font.times()))),
@@ -250,15 +249,15 @@ class SavePdf2 {
                                 children: [
                                   Container(
                                       alignment: Alignment.center,
-                                      height: 16,
+                                      height: 14,
                                       padding: EdgeInsets.only(
-                                          top: 1.7, bottom: 1.7),
+                                          top: 1.6, bottom: 1.6),
                                       child: Text("Backend",
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               font: Font.timesBold()))),
                                   Container(
-                                      width: 200,
+                                      width: 180,
                                       alignment: Alignment.centerLeft,
                                       padding:
                                           EdgeInsets.only(top: 3, bottom: 3),
@@ -271,7 +270,7 @@ class SavePdf2 {
                                               font: Font.times()))),
                                 ]),
                           ]),
-                      SizedBox(height: 10),
+                      SizedBox(height: 7),
                       Row(children: [
                         Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -279,9 +278,9 @@ class SavePdf2 {
                             children: [
                               Container(
                                   alignment: Alignment.centerLeft,
-                                  height: 16,
+                                  height: 14,
                                   padding:
-                                      EdgeInsets.only(top: 1.7, bottom: 1.7),
+                                      EdgeInsets.only(top: 1.6, bottom: 1.6),
                                   child: Text("Languages",
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
@@ -303,15 +302,15 @@ class SavePdf2 {
                             children: [
                               Container(
                                   alignment: Alignment.centerLeft,
-                                  height: 16,
+                                  height: 14,
                                   padding:
-                                      EdgeInsets.only(top: 1.7, bottom: 1.7),
+                                      EdgeInsets.only(top: 1.6, bottom: 1.6),
                                   child: Text("Tools",
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           font: Font.timesBold()))),
                               Container(
-                                  width: 200,
+                                  width: 180,
                                   alignment: Alignment.centerLeft,
                                   padding: EdgeInsets.only(top: 3, bottom: 3),
                                   //color: PdfColors.blueGrey100,
@@ -322,20 +321,18 @@ class SavePdf2 {
                                           font: Font.times()))),
                             ]),
                       ]),
-                      SizedBox(height: 8),
                     ])),
                 Spacer(),
                 Container(
                     alignment: Alignment.center,
-                    height: 20,
-                    padding: EdgeInsets.only(top: 1.7, bottom: 1.7),
+                    height: 18,
+                    padding: EdgeInsets.only(top: 1.6, bottom: 1.6),
                     margin: EdgeInsets.only(left: 15, right: 15),
                     color: PdfColors.blueGrey100,
                     child: Text("Projects",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             font: Font.timesBold()))),
-                Wrap(),
                 Container(
                     width: 450,
                     alignment: Alignment.centerLeft,
@@ -344,10 +341,10 @@ class SavePdf2 {
                       bottom: 5,
                     ),
                     margin: EdgeInsets.only(left: 15, right: 15),
-                    child: Column(children: [
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Wrap(alignment: WrapAlignment.start, children: [
                             RichText(
                               maxLines: 2,
                               text: TextSpan(
@@ -361,23 +358,254 @@ class SavePdf2 {
                                   ),
                                   TextSpan(
                                       text:
-                                          'App with Beautiful UI, Features-create shayari, change bg pic (unsplash api used), share on WhatsApp etc.',
+                                          'App with Beautiful UI, Features-create shayari, change background pic (unsplash api used), share on WhatsApp etc.',
                                       style:
                                           TextStyle(font: Font.timesItalic())),
                                 ],
                               ),
                             ),
-                            /*Text("Dear Shayari App(available on playstore), ",
-                                style: TextStyle(
-                                    font: Font.timesBold(),
-                                    fontWeight: FontWeight.bold)),
-                            Text(
-                                "App with Beautiful UI, Features-create shayari, change bg pic (unsplash api used), share on WhatsApp etc.",
-                                maxLines: 2,
-                                textAlign: TextAlign.justify,
-                                style: TextStyle(font: Font.timesItalic())),*/
                           ]),
-                    ])),
+                          SizedBox(height: 6),
+                          Wrap(alignment: WrapAlignment.start, children: [
+                            RichText(
+                              maxLines: 2,
+                              text: TextSpan(
+                                children: <TextSpan>[
+                                  TextSpan(
+                                    text: 'Yozznet (available on playstore), ',
+                                    style: TextStyle(
+                                        font: Font.timesBold(),
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  TextSpan(
+                                      text: 'an app for all  your needs!',
+                                      style:
+                                          TextStyle(font: Font.timesItalic())),
+                                ],
+                              ),
+                            ),
+                          ]),
+                          SizedBox(height: 6),
+                          Wrap(alignment: WrapAlignment.start, children: [
+                            RichText(
+                              maxLines: 2,
+                              text: TextSpan(
+                                children: <TextSpan>[
+                                  TextSpan(
+                                    text:
+                                        'KnowYourGhats - Smart India Hackathon 2020 winning app, ',
+                                    style: TextStyle(
+                                        font: Font.timesBold(),
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  TextSpan(
+                                      text:
+                                          'App to know Ghats loaction. Used google maps api',
+                                      style:
+                                          TextStyle(font: Font.timesItalic())),
+                                ],
+                              ),
+                            ),
+                          ]),
+                          SizedBox(height: 6),
+                          Wrap(alignment: WrapAlignment.start, children: [
+                            RichText(
+                              maxLines: 2,
+                              text: TextSpan(
+                                children: <TextSpan>[
+                                  TextSpan(
+                                    text:
+                                        'Commentator App :- Made as a freelancing job, ',
+                                    style: TextStyle(
+                                        font: Font.timesBold(),
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  TextSpan(
+                                      text:
+                                          'Full social media app with firebase and firestore. Feature-stories, likes, comment, follow etc.',
+                                      style:
+                                          TextStyle(font: Font.timesItalic())),
+                                ],
+                              ),
+                            ),
+                          ]),
+                          SizedBox(height: 6),
+                          Wrap(alignment: WrapAlignment.start, children: [
+                            RichText(
+                              maxLines: 2,
+                              text: TextSpan(
+                                children: <TextSpan>[
+                                  TextSpan(
+                                    text:
+                                        'KishanSeva app - made during smit hackathon, ',
+                                    style: TextStyle(
+                                        font: Font.timesBold(),
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  TextSpan(
+                                      text:
+                                          'Features-rent tools, sell products online',
+                                      style:
+                                          TextStyle(font: Font.timesItalic())),
+                                ],
+                              ),
+                            ),
+                          ]),
+                          SizedBox(height: 6),
+                          Wrap(alignment: WrapAlignment.start, children: [
+                            RichText(
+                              maxLines: 2,
+                              text: TextSpan(
+                                children: <TextSpan>[
+                                  TextSpan(
+                                    text: 'Helping hands App, ',
+                                    style: TextStyle(
+                                        font: Font.timesBold(),
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  TextSpan(
+                                      text: 'made during HackJaipur hackathon',
+                                      style:
+                                          TextStyle(font: Font.timesItalic())),
+                                ],
+                              ),
+                            ),
+                          ]),
+                        ])),
+                Spacer(),
+                Container(
+                    alignment: Alignment.center,
+                    height: 18,
+                    padding: EdgeInsets.only(top: 1.6, bottom: 1.6),
+                    margin: EdgeInsets.only(left: 15, right: 15),
+                    color: PdfColors.blueGrey100,
+                    child: Text("Awards",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            font: Font.timesBold()))),
+                Container(
+                    width: 450,
+                    alignment: Alignment.centerLeft,
+                    padding: EdgeInsets.only(
+                      top: 5,
+                      bottom: 5,
+                    ),
+                    margin: EdgeInsets.only(left: 15, right: 15),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Wrap(alignment: WrapAlignment.start, children: [
+                            RichText(
+                              maxLines: 2,
+                              text: TextSpan(
+                                children: <TextSpan>[
+                                  TextSpan(
+                                    text: 'Smart India Hackathon 2020 winner, ',
+                                    style: TextStyle(
+                                        font: Font.timesBold(),
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  TextSpan(
+                                      text:
+                                          'by Ministry of Human Resources Development and AICTE',
+                                      style:
+                                          TextStyle(font: Font.timesItalic())),
+                                ],
+                              ),
+                            ),
+                          ]),
+                          SizedBox(height: 6),
+                          Wrap(alignment: WrapAlignment.start, children: [
+                            RichText(
+                              maxLines: 2,
+                              text: TextSpan(
+                                children: <TextSpan>[
+                                  TextSpan(
+                                    text:
+                                        'Top 10 in 1 Million second Hackathon, ',
+                                    style: TextStyle(
+                                        font: Font.timesBold(),
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  TextSpan(
+                                      text: 'by TISC and publishsutra',
+                                      style:
+                                          TextStyle(font: Font.timesItalic())),
+                                ],
+                              ),
+                            ),
+                          ]),
+                          SizedBox(height: 6),
+                          Wrap(alignment: WrapAlignment.start, children: [
+                            RichText(
+                              maxLines: 2,
+                              text: TextSpan(
+                                children: <TextSpan>[
+                                  TextSpan(
+                                    text:
+                                        'B-Plan winner for my startup idea Yozznet, ',
+                                    style: TextStyle(
+                                        font: Font.timesBold(),
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  TextSpan(
+                                      text:
+                                          'by RIT bangalore(inter-college b-plan competition)',
+                                      style:
+                                          TextStyle(font: Font.timesItalic())),
+                                ],
+                              ),
+                            ),
+                          ]),
+                        ])),
+                Spacer(),
+                Container(
+                    alignment: Alignment.center,
+                    height: 18,
+                    padding: EdgeInsets.only(top: 1.6, bottom: 1.6),
+                    margin: EdgeInsets.only(left: 15, right: 15),
+                    color: PdfColors.blueGrey100,
+                    child: Text("Education",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            font: Font.timesBold()))),
+                Container(
+                    alignment: Alignment.center,
+                    padding: EdgeInsets.only(top: 5, bottom: 5),
+                    margin: EdgeInsets.only(left: 15, right: 15),
+                    //color: PdfColors.blueGrey100,
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  width: 320,
+                                  child: RichText(
+                                    maxLines: 2,
+                                    text: TextSpan(
+                                      children: <TextSpan>[
+                                        TextSpan(
+                                          text: 'Bachelor of Engineering, ',
+                                          style: TextStyle(
+                                              font: Font.timesBold(),
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        TextSpan(
+                                            text:
+                                                'Ramaiah Institute of Technology Information Science',
+                                            style: TextStyle(
+                                                font: Font.timesItalic())),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                Spacer(),
+                                Text("Bangalore")
+                              ]),
+                        ])),
               ]);
         }));
     final String dir = (await getApplicationDocumentsDirectory()).path;

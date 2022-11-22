@@ -36,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Simple PDF APP"),
+        title: const Text("Simple PDF APP"),
       ),
       body: const Center(),
       floatingActionButton: FloatingActionButton(
