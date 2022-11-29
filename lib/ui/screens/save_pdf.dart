@@ -61,7 +61,7 @@ class SavePdf {
                             style: TextStyle(fontSize: 20)),*/
                           SizedBox(height: 50),
                           Container(
-                            padding: EdgeInsets.all(10),
+                            padding: const EdgeInsets.all(10),
                             height: 160,
                             width: 160,
                             decoration: BoxDecoration(
@@ -155,7 +155,7 @@ class SavePdf {
                               indent: 20,
                               endIndent: 250),*/
                           Container(
-                            margin: EdgeInsets.only(
+                            margin: const EdgeInsets.only(
                                 left: 20, top: 10, bottom: 10, right: 20),
                             height: 1.7,
                             width: 210,
@@ -182,7 +182,7 @@ class SavePdf {
                                 ),
                                 SizedBox(width: 10),
                                 Container(
-                                  padding: EdgeInsets.all(6),
+                                  padding: const EdgeInsets.all(6),
                                   child: Text("Education",
                                       style: TextStyle(
                                           fontSize: 16,
@@ -208,7 +208,7 @@ class SavePdf {
                                   ),
                                 ),
                                 Container(
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                     top: 8,
                                   ),
                                   width: 150,
@@ -230,7 +230,7 @@ class SavePdf {
                                   alignment: Alignment.center,
                                   height: 5,
                                   width: 5,
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                       left: 45, top: 10, right: 7),
                                   decoration: const BoxDecoration(
                                     shape: BoxShape.circle,
@@ -238,7 +238,7 @@ class SavePdf {
                                   ),
                                 ),
                                 Container(
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                     top: 8,
                                   ),
                                   width: 150,
@@ -259,15 +259,15 @@ class SavePdf {
                                   alignment: Alignment.center,
                                   height: 5,
                                   width: 5,
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                       left: 45, top: 10, right: 7),
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     shape: BoxShape.circle,
                                     color: PdfColors.black,
                                   ),
                                 ),
                                 Container(
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                     top: 8,
                                   ),
                                   width: 150,
@@ -288,7 +288,7 @@ class SavePdf {
                             endIndent: 20,
                           ),*/
                           Container(
-                            margin: EdgeInsets.only(
+                            margin: const EdgeInsets.only(
                                 left: 20, top: 10, bottom: 10, right: 20),
                             height: 1.7,
                             width: 210,
@@ -312,7 +312,7 @@ class SavePdf {
                                 ),
                                 SizedBox(width: 10),
                                 Container(
-                                  padding: EdgeInsets.all(6),
+                                  padding: const EdgeInsets.all(6),
                                   child: Text("Skills",
                                       style: TextStyle(
                                           fontSize: 16,
@@ -330,15 +330,15 @@ class SavePdf {
                                   alignment: Alignment.center,
                                   height: 5,
                                   width: 5,
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                       left: 45, top: 12, right: 7),
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     shape: BoxShape.circle,
                                     color: PdfColors.black,
                                   ),
                                 ),
                                 Container(
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                     top: 8,
                                   ),
                                   width: 150,
@@ -358,15 +358,15 @@ class SavePdf {
                                   alignment: Alignment.center,
                                   height: 5,
                                   width: 5,
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                       left: 45, top: 12, right: 7),
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     shape: BoxShape.circle,
                                     color: PdfColors.black,
                                   ),
                                 ),
                                 Container(
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                     top: 8,
                                   ),
                                   width: 150,
@@ -386,15 +386,15 @@ class SavePdf {
                                   alignment: Alignment.center,
                                   height: 5,
                                   width: 5,
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                       left: 45, top: 12, right: 7),
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     shape: BoxShape.circle,
                                     color: PdfColors.black,
                                   ),
                                 ),
                                 Container(
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                     top: 8,
                                   ),
                                   width: 150,
@@ -414,15 +414,15 @@ class SavePdf {
                                   alignment: Alignment.center,
                                   height: 5,
                                   width: 5,
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                       left: 45, top: 12, right: 7),
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     shape: BoxShape.circle,
                                     color: PdfColors.black,
                                   ),
                                 ),
                                 Container(
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                     top: 8,
                                   ),
                                   width: 150,
@@ -442,15 +442,15 @@ class SavePdf {
                                   alignment: Alignment.center,
                                   height: 5,
                                   width: 5,
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                       left: 45, top: 12, right: 7),
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     shape: BoxShape.circle,
                                     color: PdfColors.black,
                                   ),
                                 ),
                                 Container(
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                     top: 8,
                                   ),
                                   width: 150,
@@ -470,15 +470,15 @@ class SavePdf {
                                   alignment: Alignment.center,
                                   height: 5,
                                   width: 5,
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                       left: 45, top: 12, right: 7),
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     shape: BoxShape.circle,
                                     color: PdfColors.black,
                                   ),
                                 ),
                                 Container(
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                     top: 8,
                                   ),
                                   width: 150,
@@ -498,15 +498,15 @@ class SavePdf {
                                   alignment: Alignment.center,
                                   height: 5,
                                   width: 5,
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                       left: 45, top: 12, right: 7),
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     shape: BoxShape.circle,
                                     color: PdfColors.black,
                                   ),
                                 ),
                                 Container(
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                     top: 8,
                                   ),
                                   width: 150,
@@ -526,15 +526,15 @@ class SavePdf {
                                   alignment: Alignment.center,
                                   height: 5,
                                   width: 5,
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                       left: 45, top: 12, right: 7),
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     shape: BoxShape.circle,
                                     color: PdfColors.black,
                                   ),
                                 ),
                                 Container(
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                     top: 8,
                                   ),
                                   width: 150,
@@ -569,7 +569,7 @@ class SavePdf {
                                 ),
                                 SizedBox(width: 10),
                                 Container(
-                                  padding: EdgeInsets.all(6),
+                                  padding: const EdgeInsets.all(6),
                                   child: Text("Experience",
                                       style: TextStyle(
                                           fontSize: 16,
@@ -581,7 +581,7 @@ class SavePdf {
                                 ),
                               ]),
                           Container(
-                            margin: EdgeInsets.only(
+                            margin: const EdgeInsets.only(
                               left: 20,
                               top: 10,
                             ),
@@ -592,7 +592,7 @@ class SavePdf {
                                     fontWeight: FontWeight.bold)),
                           ),
                           Container(
-                            margin: EdgeInsets.only(
+                            margin: const EdgeInsets.only(
                               left: 20,
                               top: 3,
                             ),
@@ -603,7 +603,7 @@ class SavePdf {
                                 )),
                           ),
                           Container(
-                            margin: EdgeInsets.only(
+                            margin: const EdgeInsets.only(
                               left: 20,
                               top: 2,
                             ),
@@ -620,8 +620,8 @@ class SavePdf {
                               endIndent: 250),*/
                           SizedBox(height: 200),
                           Container(
-                            margin:
-                                EdgeInsets.only(top: 10, bottom: 10, right: 20),
+                            margin: const EdgeInsets.only(
+                                top: 10, bottom: 10, right: 20),
                             height: 1.7,
                             width: 210,
                             color: PdfColors.black,
@@ -643,7 +643,7 @@ class SavePdf {
                                 ),
                                 SizedBox(width: 10),
                                 Container(
-                                  padding: EdgeInsets.all(6),
+                                  padding: const EdgeInsets.all(6),
                                   child: Text("Languages",
                                       style: TextStyle(
                                           fontSize: 16,
@@ -655,7 +655,7 @@ class SavePdf {
                                 ),
                               ]),
                           Container(
-                            margin: EdgeInsets.only(
+                            margin: const EdgeInsets.only(
                               left: 20,
                               top: 10,
                             ),
@@ -673,7 +673,7 @@ class SavePdf {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Container(
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                     left: 20,
                                   ),
                                   height: 10,
@@ -689,7 +689,7 @@ class SavePdf {
                                 ),
                                 SizedBox(width: 10),
                                 Text("+917090615615",
-                                    style: TextStyle(fontSize: 9)),
+                                    style: const TextStyle(fontSize: 9)),
                               ]),
                           SizedBox(height: 6),
                           Row(
@@ -697,7 +697,7 @@ class SavePdf {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Container(
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                     left: 20,
                                   ),
                                   height: 10,
@@ -713,7 +713,7 @@ class SavePdf {
                                 ),
                                 SizedBox(width: 10),
                                 Text("abc@xyz.com",
-                                    style: TextStyle(fontSize: 9)),
+                                    style: const TextStyle(fontSize: 9)),
                               ])
                         ]),
                   ]),

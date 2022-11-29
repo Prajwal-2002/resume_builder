@@ -54,12 +54,12 @@ class SavePdf2 {
                                     image: DecorationImage(
                                         image: email, fit: BoxFit.fill),
                                     shape: BoxShape.rectangle,
-                                    borderRadius: BorderRadius.all(
+                                    borderRadius: const BorderRadius.all(
                                         Radius.circular(3.0)))),
                             SizedBox(width: 5),
                             //Image(email),
                             Text("satyamkumar@gmail.com",
-                                style: TextStyle(color: PdfColors.white)),
+                                style: const TextStyle(color: PdfColors.white)),
                             //SizedBox(width: 15),
                             Spacer(),
                             Container(
@@ -70,12 +70,12 @@ class SavePdf2 {
                                     image: DecorationImage(
                                         image: telephone, fit: BoxFit.contain),
                                     shape: BoxShape.rectangle,
-                                    borderRadius: BorderRadius.all(
+                                    borderRadius: const BorderRadius.all(
                                         Radius.circular(3.0)))),
                             SizedBox(width: 5),
                             //Image(email),
                             Text("6090615615",
-                                style: TextStyle(color: PdfColors.white)),
+                                style: const TextStyle(color: PdfColors.white)),
                             Spacer(),
                             Container(
                                 width: 15,
@@ -85,12 +85,12 @@ class SavePdf2 {
                                     image: DecorationImage(
                                         image: github, fit: BoxFit.contain),
                                     shape: BoxShape.rectangle,
-                                    borderRadius: BorderRadius.all(
+                                    borderRadius: const BorderRadius.all(
                                         Radius.circular(3.0)))),
                             SizedBox(width: 5),
                             //Image(email),
                             Text("Satyamkr06",
-                                style: TextStyle(color: PdfColors.white)),
+                                style: const TextStyle(color: PdfColors.white)),
                             Spacer(),
                             Container(
                                 width: 15,
@@ -100,16 +100,16 @@ class SavePdf2 {
                                     image: DecorationImage(
                                         image: linkedin, fit: BoxFit.contain),
                                     shape: BoxShape.rectangle,
-                                    borderRadius: BorderRadius.all(
+                                    borderRadius: const BorderRadius.all(
                                         Radius.circular(3.0)))),
                             SizedBox(width: 5),
                             //Image(email),
                             Text("Satyam",
-                                style: TextStyle(color: PdfColors.white)),
+                                style: const TextStyle(color: PdfColors.white)),
                             Spacer(flex: 3)
                           ])
                         ]),
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: PdfColors.indigo600,
                       shape: BoxShape.rectangle,
                     )),
@@ -117,8 +117,8 @@ class SavePdf2 {
                 Container(
                     alignment: Alignment.center,
                     height: 18,
-                    padding: EdgeInsets.only(top: 1.6, bottom: 1.6),
-                    margin: EdgeInsets.only(left: 15, right: 15),
+                    padding: const EdgeInsets.only(top: 1.6, bottom: 1.6),
+                    margin: const EdgeInsets.only(left: 15, right: 15),
                     color: PdfColors.blueGrey100,
                     child: Text("Profile",
                         style: TextStyle(
@@ -126,8 +126,8 @@ class SavePdf2 {
                             font: Font.timesBold()))),
                 Container(
                     alignment: Alignment.center,
-                    padding: EdgeInsets.only(top: 5, bottom: 5),
-                    margin: EdgeInsets.only(left: 15, right: 15),
+                    padding: const EdgeInsets.only(top: 5, bottom: 5),
+                    margin: const EdgeInsets.only(left: 15, right: 15),
                     //color: PdfColors.blueGrey100,
                     child: Text(
                         "Enthusiastic Flutter Developer with a passion to solve real life problems using mobile apps.(2 apps on Playstore)",
@@ -139,8 +139,8 @@ class SavePdf2 {
                 Container(
                     alignment: Alignment.center,
                     height: 18,
-                    padding: EdgeInsets.only(top: 1.6, bottom: 1.6),
-                    margin: EdgeInsets.only(left: 15, right: 15),
+                    padding: const EdgeInsets.only(top: 1.6, bottom: 1.6),
+                    margin: const EdgeInsets.only(left: 15, right: 15),
                     color: PdfColors.blueGrey100,
                     child: Text("Professional Experience",
                         style: TextStyle(
@@ -148,8 +148,8 @@ class SavePdf2 {
                             font: Font.timesBold()))),
                 Container(
                     alignment: Alignment.center,
-                    padding: EdgeInsets.only(top: 5, bottom: 5),
-                    margin: EdgeInsets.only(left: 15, right: 15),
+                    padding: const EdgeInsets.only(top: 5, bottom: 5),
+                    margin: const EdgeInsets.only(left: 15, right: 15),
                     //color: PdfColors.blueGrey100,
                     child: Column(children: [
                       Row(children: [
@@ -200,8 +200,8 @@ class SavePdf2 {
                 Container(
                     alignment: Alignment.center,
                     height: 18,
-                    padding: EdgeInsets.only(top: 1.6, bottom: 1.6),
-                    margin: EdgeInsets.only(left: 15, right: 15),
+                    padding: const EdgeInsets.only(top: 1.6, bottom: 1.6),
+                    margin: const EdgeInsets.only(left: 15, right: 15),
                     color: PdfColors.blueGrey100,
                     child: Text("Skills",
                         style: TextStyle(
@@ -209,8 +209,8 @@ class SavePdf2 {
                             font: Font.timesBold()))),
                 Container(
                     alignment: Alignment.center,
-                    padding: EdgeInsets.only(top: 5, bottom: 5),
-                    margin: EdgeInsets.only(left: 15, right: 15),
+                    padding: const EdgeInsets.only(top: 5, bottom: 5),
+                    margin: const EdgeInsets.only(left: 15, right: 15),
                     //color: PdfColors.blueGrey100,
                     child: Column(children: [
                       Row(
@@ -223,7 +223,7 @@ class SavePdf2 {
                                   Container(
                                       alignment: Alignment.centerLeft,
                                       height: 14,
-                                      padding: EdgeInsets.only(
+                                      padding: const EdgeInsets.only(
                                           top: 1.6, bottom: 1.6),
                                       child: Text("Flutter",
                                           style: TextStyle(
@@ -232,8 +232,8 @@ class SavePdf2 {
                                   Container(
                                       width: 200,
                                       alignment: Alignment.centerLeft,
-                                      padding:
-                                          EdgeInsets.only(top: 3, bottom: 3),
+                                      padding: const EdgeInsets.only(
+                                          top: 3, bottom: 3),
                                       //color: PdfColors.blueGrey100,
                                       child: Text(
                                           "2.5+ years exp in coding apps with Flutter , +Points: state management-Getx and provider,MVC pattern, systematic coding",
@@ -250,7 +250,7 @@ class SavePdf2 {
                                   Container(
                                       alignment: Alignment.center,
                                       height: 14,
-                                      padding: EdgeInsets.only(
+                                      padding: const EdgeInsets.only(
                                           top: 1.6, bottom: 1.6),
                                       child: Text("Backend",
                                           style: TextStyle(
@@ -259,8 +259,8 @@ class SavePdf2 {
                                   Container(
                                       width: 180,
                                       alignment: Alignment.centerLeft,
-                                      padding:
-                                          EdgeInsets.only(top: 3, bottom: 3),
+                                      padding: const EdgeInsets.only(
+                                          top: 3, bottom: 3),
                                       //color: PdfColors.blueGrey100,
                                       child: Text(
                                           "Node.js with MongoDB, REST API, FireBase, FireStore, FCM Notifications",
@@ -279,15 +279,16 @@ class SavePdf2 {
                               Container(
                                   alignment: Alignment.centerLeft,
                                   height: 14,
-                                  padding:
-                                      EdgeInsets.only(top: 1.6, bottom: 1.6),
+                                  padding: const EdgeInsets.only(
+                                      top: 1.6, bottom: 1.6),
                                   child: Text("Languages",
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           font: Font.timesBold()))),
                               Container(
                                   alignment: Alignment.centerLeft,
-                                  padding: EdgeInsets.only(top: 3, bottom: 3),
+                                  padding:
+                                      const EdgeInsets.only(top: 3, bottom: 3),
                                   //color: PdfColors.blueGrey100,
                                   child: Text("Dart,Java,JavaScript,Python",
                                       maxLines: 2,
@@ -303,8 +304,8 @@ class SavePdf2 {
                               Container(
                                   alignment: Alignment.centerLeft,
                                   height: 14,
-                                  padding:
-                                      EdgeInsets.only(top: 1.6, bottom: 1.6),
+                                  padding: const EdgeInsets.only(
+                                      top: 1.6, bottom: 1.6),
                                   child: Text("Tools",
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
@@ -312,7 +313,8 @@ class SavePdf2 {
                               Container(
                                   width: 180,
                                   alignment: Alignment.centerLeft,
-                                  padding: EdgeInsets.only(top: 3, bottom: 3),
+                                  padding:
+                                      const EdgeInsets.only(top: 3, bottom: 3),
                                   //color: PdfColors.blueGrey100,
                                   child: Text("Git, VSCode, Notion, Clickup",
                                       maxLines: 2,
@@ -326,8 +328,8 @@ class SavePdf2 {
                 Container(
                     alignment: Alignment.center,
                     height: 18,
-                    padding: EdgeInsets.only(top: 1.6, bottom: 1.6),
-                    margin: EdgeInsets.only(left: 15, right: 15),
+                    padding: const EdgeInsets.only(top: 1.6, bottom: 1.6),
+                    margin: const EdgeInsets.only(left: 15, right: 15),
                     color: PdfColors.blueGrey100,
                     child: Text("Projects",
                         style: TextStyle(
@@ -336,11 +338,11 @@ class SavePdf2 {
                 Container(
                     width: 450,
                     alignment: Alignment.centerLeft,
-                    padding: EdgeInsets.only(
+                    padding: const EdgeInsets.only(
                       top: 5,
                       bottom: 5,
                     ),
-                    margin: EdgeInsets.only(left: 15, right: 15),
+                    margin: const EdgeInsets.only(left: 15, right: 15),
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -476,8 +478,8 @@ class SavePdf2 {
                 Container(
                     alignment: Alignment.center,
                     height: 18,
-                    padding: EdgeInsets.only(top: 1.6, bottom: 1.6),
-                    margin: EdgeInsets.only(left: 15, right: 15),
+                    padding: const EdgeInsets.only(top: 1.6, bottom: 1.6),
+                    margin: const EdgeInsets.only(left: 15, right: 15),
                     color: PdfColors.blueGrey100,
                     child: Text("Awards",
                         style: TextStyle(
@@ -486,11 +488,11 @@ class SavePdf2 {
                 Container(
                     width: 450,
                     alignment: Alignment.centerLeft,
-                    padding: EdgeInsets.only(
+                    padding: const EdgeInsets.only(
                       top: 5,
                       bottom: 5,
                     ),
-                    margin: EdgeInsets.only(left: 15, right: 15),
+                    margin: const EdgeInsets.only(left: 15, right: 15),
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -562,8 +564,8 @@ class SavePdf2 {
                 Container(
                     alignment: Alignment.center,
                     height: 18,
-                    padding: EdgeInsets.only(top: 1.6, bottom: 1.6),
-                    margin: EdgeInsets.only(left: 15, right: 15),
+                    padding: const EdgeInsets.only(top: 1.6, bottom: 1.6),
+                    margin: const EdgeInsets.only(left: 15, right: 15),
                     color: PdfColors.blueGrey100,
                     child: Text("Education",
                         style: TextStyle(
@@ -571,8 +573,8 @@ class SavePdf2 {
                             font: Font.timesBold()))),
                 Container(
                     alignment: Alignment.center,
-                    padding: EdgeInsets.only(top: 5, bottom: 5),
-                    margin: EdgeInsets.only(left: 15, right: 15),
+                    padding: const EdgeInsets.only(top: 5, bottom: 5),
+                    margin: const EdgeInsets.only(left: 15, right: 15),
                     //color: PdfColors.blueGrey100,
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
