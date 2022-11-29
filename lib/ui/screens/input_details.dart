@@ -31,7 +31,7 @@ class _InputDetailsState extends State<InputDetails> {
   final List<String> _skills = [];
   final educationWidgets = [];
   final List<Education> education = [];
-  //late List<Widget> educationDetails;
+  late List<Widget> educationDetails;
 
   @override
   void initState() {
@@ -49,7 +49,7 @@ class _InputDetailsState extends State<InputDetails> {
     _companyController = TextEditingController();
     _descriptionController = TextEditingController();
     _skillController = TextEditingController();
-    /*educationDetails = [
+    educationDetails = [
       input_fields(_courseController, "Course*", "Enter course here",
           TextInputAction.next, Icons.book),
       input_fields(_schoolController, "School*", "Enter school here",
@@ -58,7 +58,7 @@ class _InputDetailsState extends State<InputDetails> {
           TextInputAction.next, Icons.grade),
       input_fields(_yearController, "Year*", "Enter year here",
           TextInputAction.next, Icons.calendar_month),
-    ];*/
+    ];
   }
 
   @override
@@ -145,7 +145,7 @@ class _InputDetailsState extends State<InputDetails> {
             ),
             expandedAlignment: Alignment.center,
             iconColor: Colors.black87,
-            subtitle: const Text("Enter your skills"),
+            subtitle: const Text("Enter your education details"),
             children: [
               OutlinedButton(
                   onPressed: () {
@@ -215,7 +215,34 @@ class _InputDetailsState extends State<InputDetails> {
                   ? SizedBox(
                       height: 1,
                     )
-                  : _displaySkillsWidgets(),
+                  : Column(
+                      children: [
+                        ...skillsWidgets,
+                        SizedBox(
+                          height: 15,
+                        ),
+                        OutlinedButton(
+                            onPressed: () {
+                              setState(() {
+                                _removeSkills();
+                              });
+                            },
+                            style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(
+                                    Colors.indigoAccent),
+                                shape: MaterialStateProperty.all(
+                                    RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(15.0)))),
+                            child: const Text(
+                              "Remove Skills -",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                  fontSize: 15),
+                            )),
+                      ],
+                    )
             ],
             backgroundColor: Colors.white,
             collapsedBackgroundColor: const Color.fromARGB(255, 58, 58, 247),
@@ -235,16 +262,7 @@ class _InputDetailsState extends State<InputDetails> {
 
   _addEducation() {
     setState(() {
-      educationWidgets.addAll([
-        input_fields(_courseController, "Course*", "Enter course here",
-            TextInputAction.next, Icons.book),
-        input_fields(_schoolController, "School*", "Enter school here",
-            TextInputAction.next, Icons.school),
-        input_fields(_cgpaController, "Grade/Score*", "Enter CGPA here",
-            TextInputAction.next, Icons.grade),
-        input_fields(_yearController, "Year*", "Enter year here",
-            TextInputAction.next, Icons.calendar_month)
-      ]);
+      educationWidgets.addAll(educationDetails);
       education.add(Education(
         cgpa: _cgpaController.text,
         course: _courseController.text,
@@ -275,7 +293,7 @@ class _InputDetailsState extends State<InputDetails> {
       skillsWidgets.add(input_fields(
           _skillController,
           "Skill",
-          "Enter skill " + skillsWidgets.length.toString(),
+          "Enter skill " + (skillsWidgets.length + 1).toString(),
           TextInputAction.next,
           Icons.workspace_premium));
 
