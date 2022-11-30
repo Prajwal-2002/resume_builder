@@ -5,7 +5,6 @@ import 'package:simple_pdf/ui/screens/education_details.dart';
 import 'package:simple_pdf/ui/screens/experience_details.dart';
 import 'package:simple_pdf/ui/screens/personal_details.dart';
 import 'package:simple_pdf/ui/screens/skills.dart';
-import '../../input_field.dart';
 
 class InputDetails extends StatefulWidget {
   const InputDetails({super.key});
@@ -77,7 +76,7 @@ class _InputDetailsState extends State<InputDetails> {
           const SizedBox(
             height: 15,
           ),
-          ExperienceDetails(),
+          const ExperienceDetails(),
           const SizedBox(
             height: 30,
           ),

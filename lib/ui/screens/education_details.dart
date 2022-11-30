@@ -90,7 +90,7 @@ class _EducationDetailsState extends State<EducationDetails> {
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0)))),
                 child: const Text(
-                  "Remove Education Details +",
+                  "Remove Education Details -",
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
