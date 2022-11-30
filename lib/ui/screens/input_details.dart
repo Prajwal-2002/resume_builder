@@ -106,29 +106,5 @@ class _InputDetailsState extends State<InputDetails> {
       ),
     );
   }*/
-  _expansionTiles(String text, String subtitle, List<Widget> children) {
-    return ExpansionTile(
-      title: Text(
-        text,
-        style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-      ),
-      initiallyExpanded: false,
-      collapsedTextColor: Colors.white,
-      textColor: Colors.black,
-      childrenPadding: const EdgeInsets.only(
-        top: 10,
-      ),
-      expandedAlignment: Alignment.center,
-      iconColor: Colors.black87,
-      subtitle: Text(subtitle),
-      children: children,
-      backgroundColor: Colors.white,
-      collapsedBackgroundColor: const Color.fromARGB(255, 58, 58, 247),
-    );
-  }
 
-  input_fields(TextEditingController ctr, String title, String hint,
-      TextInputAction tia, IconData icon) {
-    return MyInputField(title: title, hint: hint, tia: tia, icon: Icon(icon));
-  }
 }
