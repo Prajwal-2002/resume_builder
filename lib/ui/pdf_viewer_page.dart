@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:open_file_safe/open_file_safe.dart';
 
 class PdfViewerPage {

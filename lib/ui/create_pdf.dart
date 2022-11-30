@@ -24,7 +24,7 @@ class _CreatePdfState extends State<CreatePdf> {
         appBar: AppBar(centerTitle: true, title: const Text("Create PDF")),
         body: Container(
           //padding: const EdgeInsets.only(left: 20, right: 20),
-          child: InputDetails(),
+          child: const InputDetails(),
           /*SingleChildScrollView(
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [

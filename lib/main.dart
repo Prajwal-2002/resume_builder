@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: (() {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => InputDetails()),
+            MaterialPageRoute(builder: (context) => const InputDetails()),
           );
         }),
         child: const Icon(Icons.add),
