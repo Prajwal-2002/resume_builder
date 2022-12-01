@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:simple_pdf/model/pdf_data.dart';
+import 'package:simple_pdf/ui/controllers.dart';
 import 'package:simple_pdf/ui/reuse_widgets.dart';
 
 class ExperienceDetails extends StatefulWidget {
@@ -12,27 +15,32 @@ class _ExperienceDetailsState extends State<ExperienceDetails> {
   final List<List<Widget>> experienceWidgets = [];
   late List<Widget> experienceDetails;
 
-  late TextEditingController _yearActiveController;
+  /*late TextEditingController _yearActiveController;
   late TextEditingController _positionController;
   late TextEditingController _companyController;
-  late TextEditingController _descriptionController;
+  late TextEditingController _descriptionController;*/
+  final _storeController = Get.find<Controllers>();
 
   @override
   void initState() {
     super.initState();
-    _yearActiveController = TextEditingController();
-    _positionController = TextEditingController();
-    _companyController = TextEditingController();
-    _descriptionController = TextEditingController();
     experienceDetails = [
-      ReuseWidgets.input_fields(_yearActiveController, "Year Active",
-          "Enter year active here", TextInputAction.next, Icons.calendar_month),
-      ReuseWidgets.input_fields(_positionController, "Position",
+      ReuseWidgets.input_fields(
+          _storeController.yearActiveController,
+          "Year Active",
+          "Enter year active here",
+          TextInputAction.next,
+          Icons.calendar_month),
+      ReuseWidgets.input_fields(_storeController.positionController, "Position",
           "Enter position here", TextInputAction.next, Icons.work),
-      ReuseWidgets.input_fields(_companyController, "Company",
+      ReuseWidgets.input_fields(_storeController.companyController, "Company",
           "Enter company here", TextInputAction.next, Icons.business),
-      ReuseWidgets.input_fields(_descriptionController, "Description",
-          "Enter description here", TextInputAction.next, Icons.description),
+      ReuseWidgets.input_fields(
+          _storeController.descriptionController,
+          "Description",
+          "Enter description here",
+          TextInputAction.next,
+          Icons.description),
     ];
   }
 
@@ -88,7 +96,7 @@ class _ExperienceDetailsState extends State<ExperienceDetails> {
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0)))),
                 child: const Text(
-                  "Remove Experience Details +",
+                  "Remove Experience Details -",
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
@@ -103,12 +111,18 @@ class _ExperienceDetailsState extends State<ExperienceDetails> {
   _addExperience() {
     setState(() {
       experienceWidgets.add(experienceDetails);
+      PdfData.experience.add(Experience(
+          company: _storeController.companyController.text,
+          position: _storeController.positionController.text,
+          duration: _storeController.yearActiveController.text,
+          description: _storeController.descriptionController.text));
     });
   }
 
   _removeExperience() {
     setState(() {
       experienceWidgets.removeLast();
+      PdfData.experience.removeLast();
     });
   }
 

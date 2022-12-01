@@ -112,16 +112,7 @@ class SavePdf2 {
                       shape: BoxShape.rectangle,
                     )),
                 Spacer(),
-                Container(
-                    alignment: Alignment.center,
-                    height: 18,
-                    padding: const EdgeInsets.only(top: 1.6, bottom: 1.6),
-                    margin: const EdgeInsets.only(left: 15, right: 15),
-                    color: PdfColors.blueGrey100,
-                    child: Text("Profile",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            font: Font.timesBold()))),
+                _headingBox("Profile"),
                 Container(
                     alignment: Alignment.center,
                     padding: const EdgeInsets.only(top: 5, bottom: 5),
@@ -134,16 +125,7 @@ class SavePdf2 {
                             fontWeight: FontWeight.normal,
                             font: Font.times()))),
                 Spacer(),
-                Container(
-                    alignment: Alignment.center,
-                    height: 18,
-                    padding: const EdgeInsets.only(top: 1.6, bottom: 1.6),
-                    margin: const EdgeInsets.only(left: 15, right: 15),
-                    color: PdfColors.blueGrey100,
-                    child: Text("Professional Experience",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            font: Font.timesBold()))),
+                _headingBox("Professional Experience"),
                 Container(
                     alignment: Alignment.center,
                     padding: const EdgeInsets.only(top: 5, bottom: 5),
@@ -195,16 +177,7 @@ class SavePdf2 {
                       ]),
                     ])),
                 Spacer(),
-                Container(
-                    alignment: Alignment.center,
-                    height: 18,
-                    padding: const EdgeInsets.only(top: 1.6, bottom: 1.6),
-                    margin: const EdgeInsets.only(left: 15, right: 15),
-                    color: PdfColors.blueGrey100,
-                    child: Text("Skills",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            font: Font.timesBold()))),
+                _headingBox("Skills"),
                 Container(
                     alignment: Alignment.center,
                     padding: const EdgeInsets.only(top: 5, bottom: 5),
@@ -559,7 +532,7 @@ class SavePdf2 {
                           ]),
                         ])),
                 Spacer(),
-                Container(
+                /*Container(
                     alignment: Alignment.center,
                     height: 18,
                     padding: const EdgeInsets.only(top: 1.6, bottom: 1.6),
@@ -568,7 +541,8 @@ class SavePdf2 {
                     child: Text("Education",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            font: Font.timesBold()))),
+                            font: Font.timesBold()))),*/
+                _headingBox('Education'),
                 Container(
                     alignment: Alignment.center,
                     padding: const EdgeInsets.only(top: 5, bottom: 5),
@@ -603,7 +577,7 @@ class SavePdf2 {
                                   ),
                                 ),
                                 Spacer(),
-                                Text("Bangalore")
+                                Text("Bangalore"),
                               ]),
                         ])),
               ]);
@@ -618,5 +592,17 @@ class SavePdf2 {
       ),
     );*/
     PdfViewerPage(path: path).openfile();
+  }
+
+  static _headingBox(String text) {
+    return Container(
+        alignment: Alignment.center,
+        height: 18,
+        padding: const EdgeInsets.only(top: 1.6, bottom: 1.6),
+        margin: const EdgeInsets.only(left: 15, right: 15),
+        color: PdfColors.blueGrey100,
+        child: Text(text,
+            style: TextStyle(
+                fontWeight: FontWeight.bold, font: Font.timesBold())));
   }
 }

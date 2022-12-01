@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:simple_pdf/model/pdf_data.dart';
-import 'package:simple_pdf/ui/screens/save_pdf.dart';
 import 'package:simple_pdf/ui/screens/input_details.dart';
 
 class CreatePdf extends StatefulWidget {
@@ -89,13 +88,13 @@ class _CreatePdfState extends State<CreatePdf> {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: (() {
-            saveToPdf();
+            //saveToPdf();
           }),
           child: const Icon(Icons.save),
         ));
   }
 
-  saveToPdf() async {
+  /*saveToPdf() async {
     SavePdf.savePdf(
         PdfData(
           name: _nameController.text,
@@ -106,5 +105,5 @@ class _CreatePdfState extends State<CreatePdf> {
           education: education,
         ),
         context);
-  }
+  }*/
 }

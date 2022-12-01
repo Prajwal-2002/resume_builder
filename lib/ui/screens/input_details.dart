@@ -1,9 +1,11 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:simple_pdf/ui/screens/awards.dart';
 import 'package:simple_pdf/ui/screens/education_details.dart';
 import 'package:simple_pdf/ui/screens/experience_details.dart';
 import 'package:simple_pdf/ui/screens/personal_details.dart';
+import 'package:simple_pdf/ui/screens/projects.dart';
 import 'package:simple_pdf/ui/screens/skills.dart';
 
 class InputDetails extends StatefulWidget {
@@ -77,6 +79,12 @@ class _InputDetailsState extends State<InputDetails> {
             height: 15,
           ),
           const ExperienceDetails(),
+          const SizedBox(height: 15),
+          const ProjectDetails(),
+          const SizedBox(
+            height: 15,
+          ),
+          const AwardDetails(),
           const SizedBox(
             height: 30,
           ),
@@ -96,12 +104,6 @@ class _InputDetailsState extends State<InputDetails> {
   /*saveToPdf() async {
     SavePdf2.savePdf(
       PdfData(
-        name: _nameController.text,
-        college: _schoolController.text,
-        email: _emailController.text,
-        phone: _phoneController.text,
-        address: _adressController.text,
-        education: education,
       ),
     );
   }*/

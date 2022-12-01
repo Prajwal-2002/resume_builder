@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:simple_pdf/model/pdf_data.dart';
+import 'package:simple_pdf/ui/controllers.dart';
 import 'package:simple_pdf/ui/reuse_widgets.dart';
 
 class Skills extends StatefulWidget {
@@ -10,15 +13,13 @@ class Skills extends StatefulWidget {
 
 class _SkillsState extends State<Skills> {
   final skillsWidgets = [];
-  final List<String> _skills = [];
   final educationWidgets = [];
 
-  late TextEditingController _skillController;
+  final _storeController = Get.find<Controllers>();
 
   @override
   void initState() {
     super.initState();
-    _skillController = TextEditingController();
   }
 
   @override
@@ -96,20 +97,20 @@ class _SkillsState extends State<Skills> {
   _addSkills() {
     setState(() {
       skillsWidgets.add(ReuseWidgets.input_fields(
-          _skillController,
+          _storeController.skillController,
           "Skill",
           "Enter skill " + (skillsWidgets.length + 1).toString(),
           TextInputAction.next,
           Icons.workspace_premium));
 
-      _skills.add(_skillController.text);
+      PdfData.skills.add(_storeController.skillController.text);
     });
   }
 
   _removeSkills() {
     setState(() {
       skillsWidgets.removeLast();
-      _skills.removeLast();
+      PdfData.skills.removeLast();
     });
   }
 
