@@ -1,9 +1,4 @@
 class PdfData {
-  static late String name;
-  static late String college;
-  static late String email;
-  static late String phone;
-  static late String address;
   static List<Education> education = [];
   static List<Experience> experience = [];
   static List<Award> awards = [];
@@ -49,4 +44,27 @@ class Award {
   final String desc;
 
   Award({required this.title, required this.desc});
+}
+
+class PdfDataModel {
+  final String name;
+  final String phone;
+  final String email;
+  final String address;
+  final List<Education> education;
+  final List<Experience> experience;
+  final List<Award> awards;
+  final List<Project> projects;
+  final List<String> skills;
+
+  PdfDataModel(
+      {required this.name,
+      required this.phone,
+      required this.email,
+      required this.address,
+      required this.education,
+      required this.experience,
+      required this.awards,
+      required this.projects,
+      required this.skills});
 }

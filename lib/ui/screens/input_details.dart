@@ -2,12 +2,14 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:simple_pdf/model/pdf_data.dart';
 import 'package:simple_pdf/ui/controllers.dart';
 import 'package:simple_pdf/ui/screens/awards.dart';
 import 'package:simple_pdf/ui/screens/education_details.dart';
 import 'package:simple_pdf/ui/screens/experience_details.dart';
 import 'package:simple_pdf/ui/screens/personal_details.dart';
 import 'package:simple_pdf/ui/screens/projects.dart';
+import 'package:simple_pdf/ui/screens/save_pdf2.dart';
 import 'package:simple_pdf/ui/screens/skills.dart';
 
 class InputDetails extends StatefulWidget {
@@ -18,7 +20,7 @@ class InputDetails extends StatefulWidget {
 }
 
 class _InputDetailsState extends State<InputDetails> {
-  final controller = Get.lazyPut(() => Controllers());
+  final controller = Get.find<Controllers>();
 
   @override
   void initState() {
@@ -53,7 +55,7 @@ class _InputDetailsState extends State<InputDetails> {
       ),*/
       floatingActionButton: FloatingActionButton(
         onPressed: (() {
-          //saveToPdf();
+          saveToPdf();
         }),
         child: const Icon(Icons.save),
       ),
@@ -105,11 +107,16 @@ class _InputDetailsState extends State<InputDetails> {
     }
   }
 
-  /*saveToPdf() async {
-    SavePdf2.savePdf(
-      PdfData(
-      ),
-    );
-  }*/
-
+  saveToPdf() async {
+    SavePdf2.savePdf(PdfDataModel(
+        name: controller.nameController.text,
+        phone: controller.phoneController.text,
+        email: controller.emailController.text,
+        address: controller.adressController.text,
+        education: PdfData.education,
+        experience: PdfData.experience,
+        awards: PdfData.awards,
+        projects: PdfData.projects,
+        skills: PdfData.skills));
+  }
 }

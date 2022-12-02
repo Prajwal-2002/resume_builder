@@ -24,6 +24,7 @@ class ReuseWidgets {
     );
   }
 
+  // ignore: non_constant_identifier_names
   static input_fields(TextEditingController ctr, String title, String hint,
       TextInputAction tia, IconData icon) {
     return MyInputField(title: title, hint: hint, tia: tia, icon: Icon(icon));

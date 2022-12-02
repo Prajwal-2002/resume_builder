@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:simple_pdf/ui/screens/input_details.dart';
 
 void main() {
@@ -41,10 +42,11 @@ class _MyHomePageState extends State<MyHomePage> {
       body: const Center(),
       floatingActionButton: FloatingActionButton(
         onPressed: (() {
-          Navigator.push(
+          /*Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => const InputDetails()),
-          );
+          );*/
+          Get.to(() => const InputDetails());
         }),
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
