@@ -1,6 +1,8 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:simple_pdf/ui/controllers.dart';
 import 'package:simple_pdf/ui/screens/awards.dart';
 import 'package:simple_pdf/ui/screens/education_details.dart';
 import 'package:simple_pdf/ui/screens/experience_details.dart';
@@ -16,6 +18,8 @@ class InputDetails extends StatefulWidget {
 }
 
 class _InputDetailsState extends State<InputDetails> {
+  final controller = Get.lazyPut(() => Controllers());
+
   @override
   void initState() {
     super.initState();
