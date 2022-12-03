@@ -5,10 +5,6 @@ import 'package:simple_pdf/ui/reuse_widgets.dart';
 
 class PersonalDetails extends StatelessWidget {
   late List<Widget> personalDetails;
-  /*final _adressController = TextEditingController();
-  final _nameController = TextEditingController();
-  final _phoneController = TextEditingController();
-  final _emailController = TextEditingController();*/
   final _storeController = Get.find<Controllers>();
 
   PersonalDetails({super.key}) {
@@ -21,6 +17,24 @@ class PersonalDetails extends StatelessWidget {
           "Enter email here", TextInputAction.next, Icons.email),
       ReuseWidgets.input_fields(_storeController.adressController, "Address*",
           "Enter address here", TextInputAction.next, Icons.location_on),
+      ReuseWidgets.input_fields(
+          _storeController.aboutController,
+          "About*",
+          "Enter about yourself briefly",
+          TextInputAction.next,
+          Icons.description),
+      ReuseWidgets.input_fields(
+          _storeController.gitHubController,
+          "GitHub Username",
+          "Enter GitHub username here",
+          TextInputAction.next,
+          Icons.person),
+      ReuseWidgets.input_fields(
+          _storeController.linkedInController,
+          "LinkedIn Username",
+          "Enter LinkedIn username here",
+          TextInputAction.next,
+          Icons.person),
     ];
   }
 

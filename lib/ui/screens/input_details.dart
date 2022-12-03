@@ -20,7 +20,7 @@ class InputDetails extends StatefulWidget {
 }
 
 class _InputDetailsState extends State<InputDetails> {
-  final controller = Get.find<Controllers>();
+  final controller = Get.put(Controllers());
 
   @override
   void initState() {
@@ -113,6 +113,9 @@ class _InputDetailsState extends State<InputDetails> {
         phone: controller.phoneController.text,
         email: controller.emailController.text,
         address: controller.adressController.text,
+        about: controller.aboutController.text,
+        github: controller.gitHubController.text,
+        linkedin: controller.linkedInController.text,
         education: PdfData.education,
         experience: PdfData.experience,
         awards: PdfData.awards,

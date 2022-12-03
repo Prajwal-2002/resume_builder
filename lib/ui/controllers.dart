@@ -4,6 +4,9 @@ import 'package:get/get.dart';
 class Controllers extends GetxController {
   final nameController = TextEditingController();
   final adressController = TextEditingController();
+  final aboutController = TextEditingController();
+  final gitHubController = TextEditingController();
+  final linkedInController = TextEditingController();
   final phoneController = TextEditingController();
   final emailController = TextEditingController();
   final yearActiveController = TextEditingController();

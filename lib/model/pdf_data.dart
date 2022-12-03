@@ -51,6 +51,9 @@ class PdfDataModel {
   final String phone;
   final String email;
   final String address;
+  final String about;
+  final String linkedin;
+  final String github;
   final List<Education> education;
   final List<Experience> experience;
   final List<Award> awards;
@@ -62,6 +65,9 @@ class PdfDataModel {
       required this.phone,
       required this.email,
       required this.address,
+      required this.about,
+      required this.linkedin,
+      required this.github,
       required this.education,
       required this.experience,
       required this.awards,

@@ -73,7 +73,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
             )),
         _displayProjectsWidgets(),
         projectsWidgets.isEmpty
-            ? SizedBox(
+            ? const SizedBox(
                 height: 1,
               )
             : OutlinedButton(

@@ -65,7 +65,7 @@ class _AwardDetailsState extends State<AwardDetails> {
             )),
         _displayAwardsWidgets(),
         awardsWidgets.isEmpty
-            ? SizedBox(
+            ? const SizedBox(
                 height: 1,
               )
             : OutlinedButton(

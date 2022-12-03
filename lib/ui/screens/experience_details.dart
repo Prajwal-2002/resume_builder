@@ -81,7 +81,7 @@ class _ExperienceDetailsState extends State<ExperienceDetails> {
             )),
         _displayExperienceWidgets(),
         experienceWidgets.isEmpty
-            ? SizedBox(
+            ? const SizedBox(
                 height: 1,
               )
             : OutlinedButton(

@@ -7,7 +7,7 @@ import 'package:simple_pdf/model/pdf_data.dart';
 import 'package:simple_pdf/ui/pdf_viewer_page.dart';
 
 class SavePdf2 {
-  static void savePdf(PdfData pdfData) async {
+  static void savePdf(PdfDataModel pdfData) async {
     final Document pdf = Document();
 
     final telephone = MemoryImage(
@@ -36,7 +36,7 @@ class SavePdf2 {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Text("Satyam Kumar",
+                          Text(pdfData.name,
                               style: TextStyle(
                                   fontBold: Font.courierBoldOblique(),
                                   fontSize: 18,
@@ -56,7 +56,7 @@ class SavePdf2 {
                                         Radius.circular(3.0)))),
                             SizedBox(width: 5),
                             //Image(email),
-                            Text("satyamkumar@gmail.com",
+                            Text(pdfData.email,
                                 style: const TextStyle(color: PdfColors.white)),
                             //SizedBox(width: 15),
                             Spacer(),
@@ -72,7 +72,7 @@ class SavePdf2 {
                                         Radius.circular(3.0)))),
                             SizedBox(width: 5),
                             //Image(email),
-                            Text("6090615615",
+                            Text(pdfData.phone,
                                 style: const TextStyle(color: PdfColors.white)),
                             Spacer(),
                             Container(
@@ -87,7 +87,7 @@ class SavePdf2 {
                                         Radius.circular(3.0)))),
                             SizedBox(width: 5),
                             //Image(email),
-                            Text("Satyamkr06",
+                            Text(pdfData.github,
                                 style: const TextStyle(color: PdfColors.white)),
                             Spacer(),
                             Container(
@@ -102,7 +102,7 @@ class SavePdf2 {
                                         Radius.circular(3.0)))),
                             SizedBox(width: 5),
                             //Image(email),
-                            Text("Satyam",
+                            Text(pdfData.linkedin,
                                 style: const TextStyle(color: PdfColors.white)),
                             Spacer(flex: 3)
                           ])
@@ -118,8 +118,7 @@ class SavePdf2 {
                     padding: const EdgeInsets.only(top: 5, bottom: 5),
                     margin: const EdgeInsets.only(left: 15, right: 15),
                     //color: PdfColors.blueGrey100,
-                    child: Text(
-                        "Enthusiastic Flutter Developer with a passion to solve real life problems using mobile apps.(2 apps on Playstore)",
+                    child: Text(pdfData.about,
                         maxLines: 2,
                         style: TextStyle(
                             fontWeight: FontWeight.normal,
@@ -133,14 +132,14 @@ class SavePdf2 {
                     //color: PdfColors.blueGrey100,
                     child: Column(children: [
                       Row(children: [
-                        Text("Flutter Developer, ",
+                        Text(pdfData.experience[0].position,
                             style: TextStyle(
                                 font: Font.timesBold(),
                                 fontWeight: FontWeight.bold)),
-                        Text("Rapidalley",
+                        Text(pdfData.experience[0].company,
                             style: TextStyle(font: Font.timesItalic())),
                         Spacer(),
-                        Text("1818")
+                        Text(pdfData.experience[0].duration)
                       ]),
                       SizedBox(height: 6),
                       Row(children: [
@@ -234,7 +233,7 @@ class SavePdf2 {
                                           top: 3, bottom: 3),
                                       //color: PdfColors.blueGrey100,
                                       child: Text(
-                                          "Node.js with MongoDB, REST API, FireBase, FireStore, FCM Notifications",
+                                          "${pdfData.skills[0]}, ${pdfData.skills[1]}, ${pdfData.skills[2]}, ${pdfData.skills[3]}, ${pdfData.skills[4]}",
                                           maxLines: 2,
                                           style: TextStyle(
                                               fontWeight: FontWeight.normal,
@@ -296,16 +295,7 @@ class SavePdf2 {
                       ]),
                     ])),
                 Spacer(),
-                Container(
-                    alignment: Alignment.center,
-                    height: 18,
-                    padding: const EdgeInsets.only(top: 1.6, bottom: 1.6),
-                    margin: const EdgeInsets.only(left: 15, right: 15),
-                    color: PdfColors.blueGrey100,
-                    child: Text("Projects",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            font: Font.timesBold()))),
+                _headingBox("Projects"),
                 Container(
                     width: 450,
                     alignment: Alignment.centerLeft,
@@ -323,15 +313,13 @@ class SavePdf2 {
                               text: TextSpan(
                                 children: <TextSpan>[
                                   TextSpan(
-                                    text:
-                                        'Dear Shayari App(available on playstore), ',
+                                    text: "${pdfData.projects[0].projName}  : ",
                                     style: TextStyle(
                                         font: Font.timesBold(),
                                         fontWeight: FontWeight.bold),
                                   ),
                                   TextSpan(
-                                      text:
-                                          'App with Beautiful UI, Features-create shayari, change background pic (unsplash api used), share on WhatsApp etc.',
+                                      text: pdfData.projects[0].projDescription,
                                       style:
                                           TextStyle(font: Font.timesItalic())),
                                 ],
@@ -446,16 +434,7 @@ class SavePdf2 {
                           ]),
                         ])),
                 Spacer(),
-                Container(
-                    alignment: Alignment.center,
-                    height: 18,
-                    padding: const EdgeInsets.only(top: 1.6, bottom: 1.6),
-                    margin: const EdgeInsets.only(left: 15, right: 15),
-                    color: PdfColors.blueGrey100,
-                    child: Text("Awards",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            font: Font.timesBold()))),
+                _headingBox("Awards"),
                 Container(
                     width: 450,
                     alignment: Alignment.centerLeft,
@@ -473,14 +452,13 @@ class SavePdf2 {
                               text: TextSpan(
                                 children: <TextSpan>[
                                   TextSpan(
-                                    text: 'Smart India Hackathon 2020 winner, ',
+                                    text: '${pdfData.awards[0].title}, ',
                                     style: TextStyle(
                                         font: Font.timesBold(),
                                         fontWeight: FontWeight.bold),
                                   ),
                                   TextSpan(
-                                      text:
-                                          'by Ministry of Human Resources Development and AICTE',
+                                      text: pdfData.awards[0].desc,
                                       style:
                                           TextStyle(font: Font.timesItalic())),
                                 ],
@@ -532,16 +510,6 @@ class SavePdf2 {
                           ]),
                         ])),
                 Spacer(),
-                /*Container(
-                    alignment: Alignment.center,
-                    height: 18,
-                    padding: const EdgeInsets.only(top: 1.6, bottom: 1.6),
-                    margin: const EdgeInsets.only(left: 15, right: 15),
-                    color: PdfColors.blueGrey100,
-                    child: Text("Education",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            font: Font.timesBold()))),*/
                 _headingBox('Education'),
                 Container(
                     alignment: Alignment.center,
