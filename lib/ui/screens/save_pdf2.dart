@@ -132,14 +132,16 @@ class SavePdf2 {
                     //color: PdfColors.blueGrey100,
                     child: Column(children: [
                       Row(children: [
-                        Text(pdfData.experience[0].position,
+                        Text(
+                            /*pdfData.experience[0].position,*/
+                            "hello",
                             style: TextStyle(
                                 font: Font.timesBold(),
                                 fontWeight: FontWeight.bold)),
-                        Text(pdfData.experience[0].company,
+                        Text(/*pdfData.experience[0].company*/ "hello",
                             style: TextStyle(font: Font.timesItalic())),
                         Spacer(),
-                        Text(pdfData.experience[0].duration)
+                        Text(/*pdfData.experience[0].duration*/ "hello")
                       ]),
                       SizedBox(height: 6),
                       Row(children: [
@@ -233,7 +235,7 @@ class SavePdf2 {
                                           top: 3, bottom: 3),
                                       //color: PdfColors.blueGrey100,
                                       child: Text(
-                                          "${pdfData.skills[0]}, ${pdfData.skills[1]}, ${pdfData.skills[2]}, ${pdfData.skills[3]}, ${pdfData.skills[4]}",
+                                          /*"${pdfData.skills[0]},"*/ "java",
                                           maxLines: 2,
                                           style: TextStyle(
                                               fontWeight: FontWeight.normal,
@@ -313,13 +315,13 @@ class SavePdf2 {
                               text: TextSpan(
                                 children: <TextSpan>[
                                   TextSpan(
-                                    text: "${pdfData.projects[0].projName}  : ",
+                                    text: /*"${pdfData.projects[0].projName}  : "*/ "hello",
                                     style: TextStyle(
                                         font: Font.timesBold(),
                                         fontWeight: FontWeight.bold),
                                   ),
                                   TextSpan(
-                                      text: pdfData.projects[0].projDescription,
+                                      text: /*pdfData.projects[0].projDescription*/ "hello",
                                       style:
                                           TextStyle(font: Font.timesItalic())),
                                 ],
@@ -452,13 +454,15 @@ class SavePdf2 {
                               text: TextSpan(
                                 children: <TextSpan>[
                                   TextSpan(
-                                    text: '${pdfData.awards[0].title}, ',
+                                    //text: '${pdfData.awards[0].title}, ',
+                                    text: "hello",
                                     style: TextStyle(
                                         font: Font.timesBold(),
                                         fontWeight: FontWeight.bold),
                                   ),
                                   TextSpan(
-                                      text: pdfData.awards[0].desc,
+                                      //text: pdfData.awards[0].desc,
+                                      text: "hello",
                                       style:
                                           TextStyle(font: Font.timesItalic())),
                                 ],

@@ -4,7 +4,7 @@ import 'package:simple_pdf/input_field.dart';
 class ReuseWidgets {
   static expansionTiles(String text, String subtitle, List<Widget> children) {
     return ExpansionTile(
-      maintainState: true,
+      //maintainState: true,
       title: Text(
         text,
         style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -18,15 +18,16 @@ class ReuseWidgets {
       expandedAlignment: Alignment.center,
       iconColor: Colors.black87,
       subtitle: Text(subtitle),
-      children: children,
       backgroundColor: Colors.white,
       collapsedBackgroundColor: const Color.fromARGB(255, 58, 58, 247),
+      children: children,
     );
   }
 
   // ignore: non_constant_identifier_names
   static input_fields(TextEditingController ctr, String title, String hint,
       TextInputAction tia, IconData icon) {
-    return MyInputField(title: title, hint: hint, tia: tia, icon: Icon(icon));
+    return MyInputField(
+        title: title, ctr: ctr, hint: hint, tia: tia, icon: Icon(icon));
   }
 }

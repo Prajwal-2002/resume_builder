@@ -76,24 +76,43 @@ class _ProjectDetailsState extends State<ProjectDetails> {
             ? const SizedBox(
                 height: 1,
               )
-            : OutlinedButton(
-                onPressed: () {
-                  setState(() {
-                    _removeProjects();
-                  });
-                },
-                style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all(Colors.indigoAccent),
-                    shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0)))),
-                child: const Text(
-                  "Remove Project Details -",
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                      fontSize: 15),
-                )),
+            : Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  OutlinedButton(
+                      onPressed: () {
+                        setState(() {
+                          _removeProjects();
+                        });
+                      },
+                      style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.indigoAccent),
+                          shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15.0)))),
+                      child: const Text(
+                        "Remove Project Details -",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 15),
+                      )),
+                  IconButton(
+                      alignment: Alignment.center,
+                      enableFeedback: true,
+                      color: Colors.indigoAccent,
+                      iconSize: 30,
+                      onPressed: () {
+                        _saveProjects();
+                      },
+                      icon: Icon(Icons.save_sharp)),
+                  SizedBox(
+                    height: 10,
+                  ),
+                ],
+              ),
       ],
       backgroundColor: Colors.white,
       collapsedBackgroundColor: const Color.fromARGB(255, 58, 58, 247),
@@ -103,9 +122,9 @@ class _ProjectDetailsState extends State<ProjectDetails> {
   _addProjects() {
     setState(() {
       projectsWidgets.add(projectsDetails);
-      PdfData.projects.add(Project(
+      /*PdfData.projects.add(Project(
           projName: _storeController.projNameController.text,
-          projDescription: _storeController.projDescriptionController.text));
+          projDescription: _storeController.projDescriptionController.text));*/
     });
   }
 
@@ -130,5 +149,14 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                 return projectsWidgets[index][i];
               });
         });
+  }
+
+  _saveProjects() {
+    for (int i = 0; i < projectsWidgets.length; i++) {
+      PdfData.projects.add(Project(
+          projName: _storeController.projNameController.text,
+          projDescription: _storeController.projDescriptionController.text));
+      print(_storeController.projNameController.text);
+    }
   }
 }

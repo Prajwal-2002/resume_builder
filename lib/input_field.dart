@@ -4,13 +4,13 @@ import 'package:google_fonts/google_fonts.dart';
 class MyInputField extends StatelessWidget {
   final String title, hint;
   final Icon icon;
-  final TextEditingController? ctr;
+  final TextEditingController ctr;
   final TextInputAction tia;
   const MyInputField({
     super.key,
     required this.title,
     required this.hint,
-    this.ctr,
+    required this.ctr,
     required this.tia,
     required this.icon,
   });
@@ -21,14 +21,18 @@ class MyInputField extends StatelessWidget {
       autofocus: false,
       controller: ctr,
       keyboardType: TextInputType.text,
-      /*validator: (value) {
+      validator: (value) {
         if (value!.isEmpty) {
           return ("This field is required");
         }
         return null;
-      },*/
-      onSaved: (valve) {
+      },
+      /*onSaved: (valve) {
         ctr?.text = valve!;
+      },*/
+      onChanged: (valve) {
+        ctr.text = valve;
+        print(ctr.text);
       },
       //cursorColor: Get.isDarkMode ? Colors.grey[100] : Colors.grey[700],
       textInputAction: tia,

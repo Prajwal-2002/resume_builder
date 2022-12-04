@@ -33,8 +33,8 @@ class Experience {
 }
 
 class Project {
-  final String projName;
-  final String projDescription;
+  late final String projName;
+  late final String projDescription;
 
   Project({required this.projName, required this.projDescription});
 }
