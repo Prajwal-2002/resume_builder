@@ -27,15 +27,12 @@ class MyInputField extends StatelessWidget {
         }
         return null;
       },
-      /*onSaved: (valve) {
-        ctr?.text = valve!;
-      },*/
       onChanged: (valve) {
         ctr.text = valve;
         print(ctr.text);
       },
       //cursorColor: Get.isDarkMode ? Colors.grey[100] : Colors.grey[700],
-      textInputAction: tia,
+      //textInputAction: tia,
       decoration: InputDecoration(
         suffixIcon: icon,
         contentPadding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
