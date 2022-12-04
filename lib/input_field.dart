@@ -19,7 +19,9 @@ class MyInputField extends StatelessWidget {
   Widget build(BuildContext context) {
     final field = TextFormField(
       autofocus: false,
-      controller: ctr,
+      controller: TextEditingController(text: ctr.text),
+      autocorrect: true,
+      enableSuggestions: true,
       keyboardType: TextInputType.text,
       validator: (value) {
         if (value!.isEmpty) {
@@ -31,7 +33,7 @@ class MyInputField extends StatelessWidget {
         ctr.text = valve;
         print(ctr.text);
       },
-      //cursorColor: Get.isDarkMode ? Colors.grey[100] : Colors.grey[700],
+
       //textInputAction: tia,
       decoration: InputDecoration(
         suffixIcon: icon,
