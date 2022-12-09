@@ -20,12 +20,12 @@ class _AwardDetailsState extends State<AwardDetails> {
   @override
   void initState() {
     super.initState();
-    awardsDetails = [
+    /*awardsDetails = [
       ReuseWidgets.input_fields(_storeController.titleController, "Award title",
           "Enter award title here", TextInputAction.next, Icons.title),
       ReuseWidgets.input_fields(_storeController.descController, "Description",
           "Enter award dscription", TextInputAction.next, Icons.description)
-    ];
+    ];*/
   }
 
   @override
@@ -45,6 +45,8 @@ class _AwardDetailsState extends State<AwardDetails> {
       expandedAlignment: Alignment.center,
       iconColor: Colors.black87,
       subtitle: const Text("Enter your Awards details"),
+      backgroundColor: Colors.white,
+      collapsedBackgroundColor: const Color.fromARGB(255, 58, 58, 247),
       children: [
         OutlinedButton(
             onPressed: () {
@@ -68,41 +70,74 @@ class _AwardDetailsState extends State<AwardDetails> {
             ? const SizedBox(
                 height: 1,
               )
-            : OutlinedButton(
-                onPressed: () {
-                  setState(() {
-                    _removeAwards();
-                  });
-                },
-                style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all(Colors.indigoAccent),
-                    shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0)))),
-                child: const Text(
-                  "Remove Award Details -",
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                      fontSize: 15),
-                )),
+            : Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  OutlinedButton(
+                      onPressed: () {
+                        setState(() {
+                          _removeAwards();
+                        });
+                      },
+                      style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.indigoAccent),
+                          shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15.0)))),
+                      child: const Text(
+                        "Remove Award Details -",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 15),
+                      )),
+                  IconButton(
+                      alignment: Alignment.center,
+                      enableFeedback: true,
+                      color: Colors.indigoAccent,
+                      iconSize: 30,
+                      onPressed: () {
+                        _saveAwards();
+                      },
+                      icon: const Icon(Icons.save_sharp)),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                ],
+              ),
       ],
-      backgroundColor: Colors.white,
-      collapsedBackgroundColor: const Color.fromARGB(255, 58, 58, 247),
     );
   }
 
   _addAwards() {
     setState(() {
-      awardsWidgets.add(awardsDetails);
-      PdfData.awards.add(Award(
-          title: _storeController.titleController.text,
-          desc: _storeController.descController.text));
+      _storeController.titleController.add(TextEditingController());
+      _storeController.descController.add(TextEditingController());
+      awardsWidgets.add([
+        ReuseWidgets.input_fields(
+            _storeController
+                .titleController[_storeController.titleController.length - 1],
+            "Award title",
+            "Enter award title here",
+            TextInputAction.next,
+            Icons.title),
+        ReuseWidgets.input_fields(
+            _storeController
+                .descController[_storeController.descController.length - 1],
+            "Description",
+            "Enter award dscription",
+            TextInputAction.next,
+            Icons.description)
+      ]);
     });
   }
 
   _removeAwards() {
     setState(() {
+      _storeController.titleController.removeLast();
+      _storeController.descController.removeLast();
       awardsWidgets.removeLast();
       PdfData.awards.removeLast();
     });
@@ -122,5 +157,13 @@ class _AwardDetailsState extends State<AwardDetails> {
                 return awardsWidgets[index][i];
               });
         });
+  }
+
+  _saveAwards() {
+      for (int i = 0; i < awardsWidgets.length; i++) {
+        PdfData.awards.add(Award(
+            title: _storeController.titleController[i].text,
+            desc: _storeController.descController[i].text));
+    }
   }
 }

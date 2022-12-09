@@ -39,6 +39,8 @@ class _SkillsState extends State<Skills> {
       expandedAlignment: Alignment.center,
       iconColor: Colors.black87,
       subtitle: const Text("Enter your skills"),
+      backgroundColor: Colors.white,
+      collapsedBackgroundColor: const Color.fromARGB(255, 58, 58, 247),
       children: [
         OutlinedButton(
             onPressed: () {
@@ -89,8 +91,6 @@ class _SkillsState extends State<Skills> {
                 ],
               )
       ],
-      backgroundColor: Colors.white,
-      collapsedBackgroundColor: const Color.fromARGB(255, 58, 58, 247),
     );
   }
 
@@ -99,7 +99,7 @@ class _SkillsState extends State<Skills> {
       skillsWidgets.add(ReuseWidgets.input_fields(
           _storeController.skillController,
           "Skill",
-          "Enter skill " + (skillsWidgets.length + 1).toString(),
+          "Enter skill ${(skillsWidgets.length + 1)}".toString(),
           TextInputAction.next,
           Icons.workspace_premium));
 

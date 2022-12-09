@@ -13,27 +13,11 @@ class ProjectDetails extends StatefulWidget {
 
 class _ProjectDetailsState extends State<ProjectDetails> {
   final List<List<Widget>> projectsWidgets = [];
-  late List<Widget> projectsDetails;
-
   final _storeController = Get.find<Controllers>();
 
   @override
   void initState() {
     super.initState();
-    projectsDetails = [
-      ReuseWidgets.input_fields(
-          _storeController.projNameController,
-          "Project Name",
-          "Enter project name here",
-          TextInputAction.next,
-          Icons.title),
-      ReuseWidgets.input_fields(
-          _storeController.projDescriptionController,
-          "Description",
-          "Enter project dscription",
-          TextInputAction.next,
-          Icons.description)
-    ];
   }
 
   @override
@@ -53,6 +37,8 @@ class _ProjectDetailsState extends State<ProjectDetails> {
       expandedAlignment: Alignment.center,
       iconColor: Colors.black87,
       subtitle: const Text("Enter your projects details"),
+      backgroundColor: Colors.white,
+      collapsedBackgroundColor: const Color.fromARGB(255, 58, 58, 247),
       children: [
         OutlinedButton(
             onPressed: () {
@@ -107,31 +93,44 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                       onPressed: () {
                         _saveProjects();
                       },
-                      icon: Icon(Icons.save_sharp)),
-                  SizedBox(
+                      icon: const Icon(Icons.save_sharp)),
+                  const SizedBox(
                     height: 10,
                   ),
                 ],
               ),
       ],
-      backgroundColor: Colors.white,
-      collapsedBackgroundColor: const Color.fromARGB(255, 58, 58, 247),
     );
   }
 
   _addProjects() {
     setState(() {
-      projectsWidgets.add(projectsDetails);
-      /*PdfData.projects.add(Project(
-          projName: _storeController.projNameController.text,
-          projDescription: _storeController.projDescriptionController.text));*/
+      _storeController.projNameController.add(TextEditingController());
+      _storeController.projDescriptionController.add(TextEditingController());
+      projectsWidgets.add([
+        ReuseWidgets.input_fields(
+            _storeController.projNameController[
+                _storeController.projNameController.length - 1],
+            "Project Name",
+            "Enter project name here",
+            TextInputAction.next,
+            Icons.title),
+        ReuseWidgets.input_fields(
+            _storeController.projDescriptionController[
+                _storeController.projDescriptionController.length - 1],
+            "Description",
+            "Enter project dscription",
+            TextInputAction.next,
+            Icons.description)
+      ]);
     });
   }
 
   _removeProjects() {
     setState(() {
+      _storeController.projNameController.removeLast();
+      _storeController.projDescriptionController.removeLast();
       projectsWidgets.removeLast();
-      PdfData.projects.removeLast();
     });
   }
 
@@ -154,9 +153,8 @@ class _ProjectDetailsState extends State<ProjectDetails> {
   _saveProjects() {
     for (int i = 0; i < projectsWidgets.length; i++) {
       PdfData.projects.add(Project(
-          projName: _storeController.projNameController.text,
-          projDescription: _storeController.projDescriptionController.text));
-      print(_storeController.projNameController.text);
+          projName: _storeController.projNameController[i].text,
+          projDescription: _storeController.projDescriptionController[i].text));
     }
   }
 }

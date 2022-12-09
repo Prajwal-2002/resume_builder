@@ -1,9 +1,9 @@
 class PdfData {
-  static List<Education> education = [];
-  static List<Experience> experience = [];
-  static List<Award> awards = [];
-  static List<Project> projects = [];
-  static List<String> skills = [];
+  static List<Education> education = List<Education>.empty(growable: true);
+  static List<Experience> experience = List<Experience>.empty(growable: true);
+  static List<Award> awards = List<Award>.empty(growable: true);
+  static List<Project> projects = List<Project>.empty(growable: true);
+  static List<String> skills = List<String>.empty(growable: true);
 }
 
 class Education {

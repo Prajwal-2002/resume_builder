@@ -76,21 +76,21 @@ class _InputDetailsState extends State<InputDetails> {
           const SizedBox(
             height: 15,
           ),
-          //const EducationDetails(),
+          const EducationDetails(),
           const SizedBox(
             height: 15,
           ),
-          //const Skills(),
+          const Skills(),
           const SizedBox(
             height: 15,
           ),
-          //const ExperienceDetails(),
+          const ExperienceDetails(),
           const SizedBox(height: 15),
-          //const ProjectDetails(),
+          const ProjectDetails(),
           const SizedBox(
             height: 15,
           ),
-          //const AwardDetails(),
+          const AwardDetails(),
           const SizedBox(
             height: 30,
           ),

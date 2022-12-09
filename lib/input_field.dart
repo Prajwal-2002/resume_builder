@@ -31,10 +31,8 @@ class MyInputField extends StatelessWidget {
       },
       onChanged: (valve) {
         ctr.text = valve;
-        print(ctr.text);
       },
-
-      //textInputAction: tia,
+      textInputAction: tia,
       decoration: InputDecoration(
         suffixIcon: icon,
         contentPadding: const EdgeInsets.fromLTRB(20, 15, 20, 15),

@@ -9,17 +9,25 @@ class Controllers extends GetxController {
   final linkedInController = TextEditingController();
   final phoneController = TextEditingController();
   final emailController = TextEditingController();
-  final yearActiveController = TextEditingController();
-  final positionController = TextEditingController();
-  final companyController = TextEditingController();
-  final descriptionController = TextEditingController();
+  final List<TextEditingController> yearActiveController =
+      List<TextEditingController>.empty(growable: true);
+  final List<TextEditingController> positionController =
+      List<TextEditingController>.empty(growable: true);
+  final List<TextEditingController> companyController =
+      List<TextEditingController>.empty(growable: true);
+  final List<TextEditingController> descriptionController =
+      List<TextEditingController>.empty(growable: true);
   final cgpaController = TextEditingController();
   final schoolController = TextEditingController();
   final courseController = TextEditingController();
   final yearController = TextEditingController();
   final skillController = TextEditingController();
-  final projNameController = TextEditingController();
-  final projDescriptionController = TextEditingController();
-  final titleController = TextEditingController();
-  final descController = TextEditingController();
+  final List<TextEditingController> projNameController =
+      List<TextEditingController>.empty(growable: true);
+  final List<TextEditingController> projDescriptionController =
+      List<TextEditingController>.empty(growable: true);
+  final List<TextEditingController> titleController =
+      List<TextEditingController>.empty(growable: true);
+  final List<TextEditingController> descController =
+      List<TextEditingController>.empty(growable: true);
 }

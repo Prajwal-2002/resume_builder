@@ -24,7 +24,7 @@ class _ExperienceDetailsState extends State<ExperienceDetails> {
   @override
   void initState() {
     super.initState();
-    experienceDetails = [
+    /*experienceDetails = [
       ReuseWidgets.input_fields(
           _storeController.yearActiveController,
           "Year Active",
@@ -41,7 +41,7 @@ class _ExperienceDetailsState extends State<ExperienceDetails> {
           "Enter description here",
           TextInputAction.next,
           Icons.description),
-    ];
+    ];*/
   }
 
   @override
@@ -61,6 +61,8 @@ class _ExperienceDetailsState extends State<ExperienceDetails> {
       expandedAlignment: Alignment.center,
       iconColor: Colors.black87,
       subtitle: const Text("Enter your experience details"),
+      backgroundColor: Colors.white,
+      collapsedBackgroundColor: const Color.fromARGB(255, 58, 58, 247),
       children: [
         OutlinedButton(
             onPressed: () {
@@ -84,43 +86,99 @@ class _ExperienceDetailsState extends State<ExperienceDetails> {
             ? const SizedBox(
                 height: 1,
               )
-            : OutlinedButton(
-                onPressed: () {
-                  setState(() {
-                    _removeExperience();
-                  });
-                },
-                style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all(Colors.indigoAccent),
-                    shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0)))),
-                child: const Text(
-                  "Remove Experience Details -",
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                      fontSize: 15),
-                )),
+            : Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  OutlinedButton(
+                      onPressed: () {
+                        setState(() {
+                          _removeExperience();
+                        });
+                      },
+                      style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.indigoAccent),
+                          shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15.0)))),
+                      child: const Text(
+                        "Remove Experience Details -",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 15),
+                      )),
+                  IconButton(
+                      alignment: Alignment.center,
+                      enableFeedback: true,
+                      color: Colors.indigoAccent,
+                      iconSize: 30,
+                      onPressed: () {
+                        _saveExperiences();
+                      },
+                      icon: const Icon(Icons.save_sharp)),
+                  // ignore: prefer_const_constructors
+                  SizedBox(
+                    height: 10,
+                  ),
+                ],
+              )
       ],
-      backgroundColor: Colors.white,
-      collapsedBackgroundColor: const Color.fromARGB(255, 58, 58, 247),
     );
   }
 
   _addExperience() {
     setState(() {
-      experienceWidgets.add(experienceDetails);
-      PdfData.experience.add(Experience(
+      //experienceWidgets.add(experienceDetails);
+      _storeController.companyController.add(TextEditingController());
+      _storeController.positionController.add(TextEditingController());
+      _storeController.descriptionController.add(TextEditingController());
+      _storeController.yearActiveController.add(TextEditingController());
+      experienceWidgets.add([
+        ReuseWidgets.input_fields(
+            _storeController.yearActiveController[
+                _storeController.yearActiveController.length - 1],
+            "Year Active",
+            "Enter year active here",
+            TextInputAction.next,
+            Icons.calendar_month),
+        ReuseWidgets.input_fields(
+            _storeController.positionController[
+                _storeController.positionController.length - 1],
+            "Position",
+            "Enter position here",
+            TextInputAction.next,
+            Icons.work),
+        ReuseWidgets.input_fields(
+            _storeController.companyController[
+                _storeController.companyController.length - 1],
+            "Company",
+            "Enter company here",
+            TextInputAction.next,
+            Icons.business),
+        ReuseWidgets.input_fields(
+            _storeController.descriptionController[
+                _storeController.descriptionController.length - 1],
+            "Description",
+            "Enter description here",
+            TextInputAction.next,
+            Icons.description),
+      ]);
+      /*PdfData.experience.add(Experience(
           company: _storeController.companyController.text,
           position: _storeController.positionController.text,
           duration: _storeController.yearActiveController.text,
-          description: _storeController.descriptionController.text));
+          description: _storeController.descriptionController.text));*/
     });
   }
 
   _removeExperience() {
     setState(() {
+      _storeController.descriptionController.removeLast();
+      _storeController.yearActiveController.removeLast();
+      _storeController.companyController.removeLast();
+      _storeController.positionController.removeLast();
       experienceWidgets.removeLast();
       PdfData.experience.removeLast();
     });
@@ -140,5 +198,15 @@ class _ExperienceDetailsState extends State<ExperienceDetails> {
                 return experienceWidgets[index][i];
               });
         });
+  }
+
+  _saveExperiences() {
+    for (int i = 0; i < experienceWidgets.length; i++) {
+      PdfData.experience.add(Experience(
+          company: _storeController.companyController[i].text,
+          position: _storeController.positionController[i].text,
+          duration: _storeController.yearActiveController[i].text,
+          description: _storeController.descriptionController[i].text));
+    }
   }
 }

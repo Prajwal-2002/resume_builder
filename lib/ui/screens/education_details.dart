@@ -50,6 +50,8 @@ class _EducationDetailsState extends State<EducationDetails> {
       expandedAlignment: Alignment.center,
       iconColor: Colors.black87,
       subtitle: const Text("Enter your education details"),
+      backgroundColor: Colors.white,
+      collapsedBackgroundColor: const Color.fromARGB(255, 58, 58, 247),
       children: [
         OutlinedButton(
             onPressed: () {
@@ -70,7 +72,7 @@ class _EducationDetailsState extends State<EducationDetails> {
             )),
         _displayEducationWidgets(),
         educationWidgets.isEmpty
-            ? SizedBox(
+            ? const SizedBox(
                 height: 1,
               )
             : OutlinedButton(
@@ -92,8 +94,6 @@ class _EducationDetailsState extends State<EducationDetails> {
                       fontSize: 15),
                 )),
       ],
-      backgroundColor: Colors.white,
-      collapsedBackgroundColor: const Color.fromARGB(255, 58, 58, 247),
     );
   }
 
